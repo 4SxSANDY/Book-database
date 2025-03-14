@@ -1,15 +1,16 @@
-// src/App.jsx
-
-import React from 'react';
-import Home from './Home';
-import './App.css'; // Import global styles
-
-function App() {
+import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Home from './Home.jsx';
+import { Addbookform } from './components/Addbookform';
+export const App = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+    <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/addbookform" element={<Addbookform/>}/>
+       </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
